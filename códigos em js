@@ -1,0 +1,30 @@
+/*ex01
+window.alert('vai corinthians')
+window.confirm('corinthians vai ganhar amanhã?')
+window.prompt('qual vai ser o placar?')
+
+
+
+/*ex02
+var nome = window.prompt('qual seu nome?')
+window.alert('é um prazer te conhecer, '+ nome)//esse + tá servindo para concatenação
+
+
+ /*ex03
+var n1= Number(window.prompt('fale um número: '))//converte a str em número inteiro
+var n2= Number( window.prompt('fale outro número: '))
+var s= n1+n2
+window.alert('a soma entre os valores é ' + s)
+//ou pode fazer assim
+var n1= Number(window.prompt('fale um número: '))
+var n2= Number( window.prompt('fale outro número: '))
+var s= n1+n2
+window.alert(`a soma entre ${n1} e ${n2} é igual a ${s}`) /*dessa forma tem que usar a crase
+*/
+
+/*ex04
+var nome= window.prompt('qual seu nome?')
+document.write(`seu nome tem ${nome.length} letras. <br/>`)
+document.write(`seu nome em maiúsculo é ${nome.toUpperCase()}<br/>`)
+document.write(`seu nome em minúsculo é ${nome.toLowerCase()}`)
+*/
