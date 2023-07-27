@@ -3,9 +3,33 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body{
+            background-color: indianred;
+            font-family: 'Courier New', Courier, monospace;
+            color: whitesmoke;
+        }
+    </style>
     <title>Introdução a DOM</title>
 </head>
 <body>
-    
+    <h1>iniciando estudos com o DOM</h1>
+    <p>aqui vai o resultado</p>
+    <p>aprendendo a usar <strong>DOMs</strong> em JavaScript</p>
+    <div id="msg">clique em mim</div>
+
+    <script>
+        var corpo = document.body
+        var p1 = document.getElementsByTagName('p')[0] // vai pegar apenas o primeiro parágrafo
+        var d = document.getElementById('msg')
+
+        d.style.background = 'darkred'
+        d.innerText = 'estou aguardando...' // vai substituir o texto
+        document.write('está escrito assim: '+ p1.innerText) // vai pegar o texto que está dentro do parágrafo selecionado
+        corpo.style.backgroundColor = 'purple'
+        p1.style.color = 'black' // vai mudar a cor do parágrafo para preto
+
+        /*por seletor(css): var d = document.querySelector('div#msg')*/
+    </script>
 </body>
 </html>
