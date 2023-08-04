@@ -4,11 +4,24 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <style>
+        body{
+            font-family: Arial, Helvetica, sans-serif;
+            background-color: burlywood;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            margin: auto;
+            align-items: center;
+            justify-content: center;
+
+            transform: translate(-50%, -50%);
+        }
+
         input{
             width: 80px;
             font-size: 18px;
             border: 2px solid rgb(0, 0, 0);
-            border-radius: 10px;
+            border-radius: 20px;
             text-align: center;
         }
 
@@ -18,7 +31,7 @@
         }
 
         input[type=button]:hover{
-            background-color: rgb(212, 70, 99);
+            background-color: rgb(73, 2, 16);
             cursor: pointer;
         }
 
@@ -40,7 +53,7 @@
             var tn1 = document.getElementById('itxtn1')
             var tn2 = document.querySelector('input#itxtn2')
             var res = document.getElementById('res')
-            var n1 = Number(tn1.value)
+            var n1 = Number(tn1.value) //vai pegar o valor digitado no input e "transformar" em número
             var n2 = Number(tn2.value)
             var s = n1 + n2
             res.innerHTML = 'Resultado: ' + s
