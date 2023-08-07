@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Courier New', Courier, monospace;
+        }
+        body{
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            margin: auto;
+            text-align: center;
+            background-color: crimson;
+            font-size: 20px;
+
+            transform: translate(-50%, -50%);
+        }
+
+        p{
+            font-weight: bolder;
+        }
+
+        input[type=text]{
+            padding: 7px;
+            color: black;
+            font-weight: bolder;
+            border-radius: 10px;
+            border: none;
+        }
+
+        input[type=button]{
+            background-color: black;
+            color: whitesmoke;
+            font-weight: bolder;
+            border-radius: 7px;
+            border: none;
+            padding: 10px;
+            margin: 15px;
+            cursor: pointer;
+        }
+
+        input[type=button]:hover{
+            background-color: whitesmoke;
+            color: black;
+        }
+    </style>
+    <title>Sistema de País</title>
+</head>
+<body>
+    <h1>Digite abaixo sua língua</h1>
+    <p>Nacionalidade: <input type="text" name="nacionalidade" id="inac"></p>
+    <input type="button" value="Verificar" onclick="verificar()">
+    <div id="res"></div>
+
+    <script>
+        function verificar() {
+            var n = document.getElementById('inac')
+            var nacionalidade = n.value
+            var res = document.getElementById('res')
+            if(nacionalidade == 'Brasil' || nacionalidade == 'brasil'){
+                res.innerHTML += '<p>Você é brasileiro!</p>'
+            }else{
+                res.innerHTML += '<p>Você é estrangeiro!</p>'
+            }
+            res.innerHTML += '<p>Bem vindo ao nosso país!</p>'
+        }
+    </script>
+</body>
+</html>

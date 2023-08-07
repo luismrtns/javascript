@@ -3,25 +3,25 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Multa de trânsito</title>
+    <title>Sistema de multas</title>
 </head>
 <body>
-    <h1>Sistema de Multas</h1>
-    Velocidade do carro: <input type="number" name="vel" id="ivel"> km/h
+    <h1>DETRAN</h1>
+    <p>Insira sua velocidade abaixo</p>
+    <input type="number" name="vel" id="vel">
     <input type="button" value="Verificar" onclick="calcular()">
-    <div id="res">
+    <div id="res"></div>
 
-    </div>
     <script>
-        function calcular(){
-            var vel = document.getElementById('ivel')
-            var res = document.querySelector('div#res')
+        function calcular() {
+            var velocidade = document.getElementById('vel')
             var v = Number(vel.value)
-            res.innerHTML = `<p>Sua velocidade atual é de ${vel}km/h</p>`
+            var res = document.getElementById('res')
+            res.innerHTML = `sua velocidade atual é de <strong>${v} Km/h</strong>`
             if(v > 60){
-                res.innerHTML += `<p>você está multado por excesso de velocidade</p>`
+                res.innerHTML += '<p>você está acima da velociade permitida. <strong>MULTADO!</strong></p>' //tem q ser += senão vai apagar a mensagem anterior
             }
-            res.innerHTML += `<p>dirija sempre com cinto de segurança!</p>`
+            res.innerHTML += '<p>dirija sempre com o cinto de segurança</p>'
         }
     </script>
 </body>
