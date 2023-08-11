@@ -15,6 +15,7 @@ header{
     text-align: center;
     color: azure;
     font-size: 20px;
+    padding: 15px;
 }
 
 section{
@@ -26,11 +27,24 @@ section{
     box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.445);
 }
 
+div#msg{
+    text-align: center;
+    font-size: 20px;
+}
+
+div#foto{
+    display: flex;
+    justify-content: center;
+    margin: auto;
+    height: 500px;
+}
+
 footer{
-    position: relative;
+    position: absolute;
     bottom: 0;
+    width: 100%;
     color: azure;
-    background-color: rgb(24, 33, 82);
+    background-color: rgb(0, 0, 0);
     text-align: center;
     padding: 10px;
 }
